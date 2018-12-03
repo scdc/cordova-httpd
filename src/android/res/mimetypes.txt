@@ -1,1 +1,1 @@
-xhtml	text/html
+xhtml=text/html
