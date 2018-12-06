@@ -3,7 +3,6 @@ package com.rjfun.cordova.httpd;
 import android.content.Context;
 import android.content.res.AssetManager;
 import android.util.Log;
-import com.aquafadas.openbook.R;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
@@ -100,7 +99,8 @@ public class CorHttpd extends CordovaPlugin {
     BufferedReader reader = null;
     String line = null;
     try {
-      stream = context.getResources().openRawResource(R.raw.mimetypes);
+      int mimeTypesId = context.getResources().getIdentifier("mimetypes","raw",context.getPackageName());
+      stream = context.getResources().openRawResource(mimeTypesId);
       reader = new BufferedReader(new InputStreamReader(stream));
       line = reader.readLine();
       while (line != null) {
