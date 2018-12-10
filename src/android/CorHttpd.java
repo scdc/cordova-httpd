@@ -94,7 +94,7 @@ public class CorHttpd extends CordovaPlugin {
   }
 
   private Hashtable<String, String> loadMimeTypesFromResources(Context context) {
-    Hashtable<String, String> mimeTypes = new Hashtable<>();
+    Hashtable<String, String> mimeTypes = new Hashtable<String, String>();
     InputStream stream = null;
     BufferedReader reader = null;
     String line = null;
