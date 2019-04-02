@@ -1934,6 +1934,7 @@ static NSMutableArray *recentNonces;
 	
 	// Add server capability headers
 	[response setHeaderField:@"Accept-Ranges" value:@"bytes"];
+    [response setHeaderField:@"Cache-Control" value:@"no-cache"];
 	
 	// Add optional response headers
 	if ([httpResponse respondsToSelector:@selector(httpHeaders)])
